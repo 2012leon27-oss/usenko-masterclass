@@ -1,0 +1,43 @@
+/* Additional exact-match styles for the landing page */
+
+.hero-headline {
+  font-weight: 800;
+  letter-spacing: -2.2px;
+}
+
+/* Make sure the photo frame matches the maket rounded + subtle border feel */
+.photo-frame {
+  box-shadow: 0 30px 60px -15px rgb(0 0 0 / 0.22),
+              0 10px 20px -5px rgb(0 0 0 / 0.12);
+  border: 1px solid #e8e2d8;
+}
+
+/* Fine tune day badges to feel like the screenshot */
+.day-badge {
+  font-weight: 600;
+  border: 1px solid #f0ebe3;
+}
+
+.day-badge .label {
+  text-transform: uppercase;
+}
+
+/* Responsive tweaks */
+@media (max-width: 1024px) {
+  .hero-headline {
+    font-size: 46px;
+    letter-spacing: -1.6px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-headline {
+    font-size: 36px;
+    letter-spacing: -1.2px;
+  }
+  
+  .pill {
+    font-size: 12px;
+    padding: 5px 11px;
+  }
+}
