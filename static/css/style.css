@@ -1,43 +1,341 @@
-/* Additional exact-match styles for the landing page */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap');
 
-.hero-headline {
-  font-weight: 800;
-  letter-spacing: -2.2px;
+:root {
+  --bg: #f9f7f2;
+  --text: #111111;
+  --muted: #4a4a4a;
+  --red: #7c1f31;
+  --red-hover: #651828;
+  --border: #e4dfd6;
+  --white: #ffffff;
+  --max-width: 1180px;
 }
 
-/* Make sure the photo frame matches the maket rounded + subtle border feel */
-.photo-frame {
-  box-shadow: 0 30px 60px -15px rgb(0 0 0 / 0.22),
-              0 10px 20px -5px rgb(0 0 0 / 0.12);
-  border: 1px solid #e8e2d8;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* Fine tune day badges to feel like the screenshot */
-.day-badge {
+html, body {
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 28px 32px 40px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 28px 36px;
+  align-items: start;
+}
+
+/* Badges */
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+
+.badge {
+  font-size: 11.5px;
   font-weight: 600;
-  border: 1px solid #f0ebe3;
+  letter-spacing: 0.2px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  line-height: 1.2;
+}
+
+.badge-dark {
+  background: #111;
+  color: #fff;
+}
+
+.badge-light {
+  background: var(--white);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+/* Headline */
+.headline {
+  font-family: 'Oswald', 'Arial Narrow', sans-serif;
+  font-size: clamp(38px, 4.8vw, 58px);
+  font-weight: 700;
+  line-height: 0.98;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.headline .accent {
+  color: var(--red);
+}
+
+.subtitle {
+  font-size: 16px;
+  line-height: 1.45;
+  font-weight: 600;
+  color: #1a1a1a;
+  max-width: 500px;
+  margin-bottom: 18px;
+}
+
+.author {
+  margin-bottom: 22px;
+}
+
+.author-name {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.author-meta {
+  font-size: 13px;
+  color: #3f3f3f;
+  line-height: 1.4;
+}
+
+/* CTA row */
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.btn-register {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--red);
+  color: #fff;
+  text-decoration: none;
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  padding: 15px 26px;
+  border-radius: 14px;
+  min-height: 54px;
+  transition: background 0.2s ease, transform 0.2s ease;
+  text-align: center;
+}
+
+.btn-register:hover {
+  background: var(--red-hover);
+  transform: translateY(-1px);
+}
+
+.gift-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 8px 12px 8px 8px;
+  text-decoration: none;
+  color: inherit;
+  max-width: 310px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+  transition: border-color 0.2s ease;
+}
+
+.gift-card:hover {
+  border-color: #d4cdc2;
+}
+
+.gift-thumb {
+  position: relative;
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.gift-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gift-thumb .play {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.gift-thumb .play::after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 7px 0 7px 12px;
+  border-color: transparent transparent transparent #fff;
+  margin-left: 3px;
+}
+
+.gift-text-title {
+  font-size: 12.5px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 2px;
+}
+
+.gift-text-sub {
+  font-size: 11.5px;
+  color: #666;
+  line-height: 1.3;
+}
+
+.note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #666;
+}
+
+.note-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--red);
+  flex-shrink: 0;
+}
+
+/* Photo column */
+.photo-col {
+  position: relative;
+  padding-top: 6px;
+}
+
+.photo-accent {
+  position: relative;
+  padding: 10px 0 0 10px;
+}
+
+.photo-accent::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - 18px);
+  height: 10px;
+  background: var(--red);
+  border-radius: 18px 18px 0 0;
+}
+
+.photo-accent::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: calc(100% - 18px);
+  background: var(--red);
+  border-radius: 18px 0 0 18px;
+}
+
+.photo-frame {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  background: #e8dfd7;
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.14);
+}
+
+.photo-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 420px;
+  object-fit: cover;
+  object-position: center 15%;
+}
+
+.day-badge {
+  position: absolute;
+  background: var(--white);
+  border: 1px solid #efe9e1;
+  border-radius: 12px;
+  padding: 9px 13px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+  z-index: 2;
 }
 
 .day-badge .label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  color: var(--red);
   text-transform: uppercase;
+  margin-bottom: 2px;
 }
 
-/* Responsive tweaks */
-@media (max-width: 1024px) {
-  .hero-headline {
-    font-size: 46px;
-    letter-spacing: -1.6px;
+.day-badge .text {
+  font-size: 12.5px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: #111;
+}
+
+.day-1 {
+  left: 18px;
+  bottom: 88px;
+  width: 168px;
+  transform: rotate(-1.5deg);
+}
+
+.day-2 {
+  right: 14px;
+  bottom: 22px;
+  transform: rotate(1deg);
+}
+
+@media (max-width: 960px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .photo-frame img {
+    min-height: 360px;
   }
 }
 
 @media (max-width: 640px) {
-  .hero-headline {
-    font-size: 36px;
-    letter-spacing: -1.2px;
+  .page {
+    padding: 20px 16px 32px;
   }
-  
-  .pill {
-    font-size: 12px;
-    padding: 5px 11px;
+
+  .cta-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-register,
+  .gift-card {
+    width: 100%;
+    max-width: none;
   }
 }

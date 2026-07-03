@@ -1,230 +1,74 @@
 <!DOCTYPE html>
-<!-- GitHub Pages deploy -->
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Почему не растёт доход • Бесплатный мастер-класс</title>
-  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="./static/css/style.css">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap');
-    
-    :root {
-      --accent-red: #9C2740;
-      --accent-red-dark: #7C1F31;
-    }
-    
-    body {
-      font-family: 'Manrope', 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-    }
-    
-    .hero-headline {
-      font-family: 'Manrope', 'Inter', system-ui, sans-serif;
-      font-size: 62px;
-      line-height: 1.05;
-      font-weight: 800;
-      letter-spacing: -1.5px;
-    }
-    
-    .section-container {
-      max-width: 1120px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    
-    .pill {
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 0.3px;
-      padding: 6px 14px;
-      border-radius: 9999px;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-    
-    .main-red {
-      color: #9C2740;
-    }
-    
-    .cta-button {
-      background-color: #9C2740;
-      color: white;
-      font-weight: 700;
-      font-size: 15px;
-      padding: 14px 32px;
-      border-radius: 9999px;
-      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-      letter-spacing: 0.2px;
-    }
-    
-    .cta-button:hover {
-      background-color: #7C1F31;
-      transform: translateY(-1px);
-      box-shadow: 0 10px 15px -3px rgb(156 39 64 / 0.3);
-    }
-    
-    .photo-frame {
-      border-radius: 42px;
-      overflow: hidden;
-      box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-      background: #f4e9e2;
-    }
-    
-    .day-badge {
-      background: white;
-      border-radius: 14px;
-      padding: 10px 16px;
-      font-size: 13px;
-      line-height: 1.25;
-      box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-      font-weight: 600;
-    }
-    
-    .day-badge .label {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      color: #9C2740;
-      margin-bottom: 1px;
-    }
-    
-    .gift-card {
-      background: white;
-      border-radius: 16px;
-      box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.06);
-    }
-    
-    .text-body {
-      font-size: 15.5px;
-      line-height: 1.55;
-      color: #3f3f3f;
-    }
-    
-    .author-line {
-      font-size: 14px;
-      color: #444;
-    }
-    
-    .exact-match {
-      /* For pixel tuning */
-    }
-  </style>
 </head>
-<body class="bg-[#F9F7F3] text-[#161616] min-h-screen py-8">
-  <div class="section-container px-6">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-x-10 gap-y-8 items-start">
-      
-      <!-- LEFT COLUMN -->
-      <div class="lg:col-span-7 xl:col-span-7">
-        
-        <!-- Top badges -->
-        <div class="flex flex-wrap items-center gap-2 mb-8">
-          <div class="pill bg-black text-white">
-            ОНЛАЙН
-          </div>
-          <div class="pill bg-white text-[#161616] border border-[#e5e2db]">
-            8-9 ИЮЛЯ
-          </div>
-          <div class="pill bg-white text-[#161616] border border-[#e5e2db]">
-            БЕСПЛАТНЫЙ МАСТЕР-КЛАСС
-          </div>
+<body>
+  <main class="page">
+    <div class="layout">
+      <section class="content-col">
+        <div class="badges">
+          <span class="badge badge-dark">ОНЛАЙН</span>
+          <span class="badge badge-light">8-9 ИЮЛЯ</span>
+          <span class="badge badge-light">БЕСПЛАТНЫЙ МАСТЕР-КЛАСС</span>
         </div>
 
-        <!-- Headline -->
-        <h1 class="hero-headline leading-[1.02] tracking-[-1.8px] mb-2">
+        <h1 class="headline">
           ПОЧЕМУ НЕ<br>
-          РАСТЁТ <span class="main-red">ДОХОД</span><br>
-          ХОТЯ ТЫ ВСЁ ЗНАЕШЬ И ДЕЛАЕШЬ ПРАВИЛЬНО
+          РАСТЁТ <span class="accent">ДОХОД</span><br>
+          ХОТЯ ТЫ ВСЁ ЗНАЕШЬ<br>
+          И ДЕЛАЕШЬ ПРАВИЛЬНО
         </h1>
 
-        <!-- Sub description -->
-        <p class="text-body max-w-[520px] mt-5 mb-8">
+        <p class="subtitle">
           Найди свой денежный сценарий и узнай, что реально держит твой доход.
         </p>
 
-        <!-- Author -->
-        <div class="flex items-center gap-x-3 mb-7">
-          <div>
-            <div class="font-semibold text-[15px]">Андрей Усенко</div>
-            <div class="author-line">бизнес-психолог · 9 лет опыта · сканирование по голосу</div>
-          </div>
+        <div class="author">
+          <div class="author-name">Андрей Усенко</div>
+          <div class="author-meta">бизнес-психолог · 9 лет опыта · сканирование по голосу</div>
         </div>
 
-        <!-- CTA + Gift card row -->
-        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 mb-5">
-          <!-- Main CTA -->
-          <a href="#" id="cta-register"
-             class="cta-button inline-flex items-center justify-center whitespace-nowrap shadow-sm">
-            ЗАРЕГИСТРИРОВАТЬСЯ БЕСПЛАТНО
-          </a>
+        <div class="cta-row">
+          <a href="#" id="cta-register" class="btn-register">ЗАРЕГИСТРИРОВАТЬСЯ БЕСПЛАТНО</a>
 
-          <!-- Gift card -->
-          <a href="#" id="cta-gift" class="gift-card flex items-center gap-3 px-3 py-2.5 border border-[#eee9e2] max-w-[300px] hover:border-[#d9d3c9] transition-colors no-underline text-inherit">
-            <div class="w-9 h-9 bg-[#161616] rounded-full flex items-center justify-center shrink-0">
-              <!-- Play icon -->
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M8 5.5V18.5L19 12L8 5.5Z" fill="white"/>
-              </svg>
+          <a href="#" id="cta-gift" class="gift-card">
+            <div class="gift-thumb">
+              <img src="./static/images/andrey-thumb.jpg" alt="Видео от Андрея">
+              <span class="play" aria-hidden="true"></span>
             </div>
-            <div class="leading-tight">
-              <div class="text-[13.5px] font-semibold">Зарегистрируйся сейчас и получи подарок</div>
-              <div class="text-[12.5px] text-[#666]">Видео-урок от Андрея сразу после регистрации</div>
+            <div>
+              <div class="gift-text-title">Зарегистрируйся сейчас и получи подарок</div>
+              <div class="gift-text-sub">Видео-урок от Андрея сразу после регистрации</div>
             </div>
           </a>
         </div>
 
-        <!-- Bottom note -->
-        <div class="flex items-center gap-2 text-[12.5px] text-[#666] mt-2">
-          <div class="w-1.5 h-1.5 rounded-full bg-[#9C2740]"></div>
+        <div class="note">
+          <span class="note-dot"></span>
           <span>2 дня: сценарии, финансовый потолок и живые разборы по голосу</span>
         </div>
+      </section>
 
-      </div>
-
-      <!-- RIGHT COLUMN - PHOTO -->
-      <div class="lg:col-span-5 xl:col-span-5 relative">
-        <div class="photo-frame relative">
-          <img 
-            src="./static/images/andrey.png" 
-            alt="Андрей Усенко" 
-            class="w-full h-auto object-cover"
-            style="max-height: 520px;"
-          >
-          
-          <!-- Day 1 badge -->
-          <div class="day-badge absolute left-[22px] bottom-[78px] w-[172px]">
-            <div class="label">ДЕНЬ 1</div>
-            <div class="text-[13.5px] leading-[1.3] text-[#161616]">6 денежных сценариев.<br>Узнай свой</div>
-          </div>
-
-          <!-- Day 2 badge -->
-          <div class="day-badge absolute right-[18px] bottom-[22px]">
-            <div class="label">ДЕНЬ 2</div>
-            <div class="text-[13.5px] text-[#161616]">Разборы по голосу</div>
+      <section class="photo-col">
+        <div class="photo-accent">
+          <div class="photo-frame">
+            <img src="./static/images/andrey.jpg" alt="Андрей Усенко">
+            <div class="day-badge day-1">
+              <div class="label">ДЕНЬ 1</div>
+              <div class="text">6 денежных сценариев.<br>Узнай свой</div>
+            </div>
+            <div class="day-badge day-2">
+              <div class="label">ДЕНЬ 2</div>
+              <div class="text">Разборы по голосу</div>
+            </div>
           </div>
         </div>
-      </div>
-
+      </section>
     </div>
-  </div>
-
-  <!-- Bottom subtle bar matching the maket style -->
-  <div class="section-container px-6 mt-10">
-    <div class="h-px bg-[#e8e4db] my-4"></div>
-  </div>
-
-  <script>
-    // Tailwind script run
-    function initTailwind() {
-      // Any runtime config if needed
-    }
-    initTailwind();
-
-    // All register buttons will be updated with real link later.
-    // For now they are # placeholders.
-    console.log('%c[Landing] Сайт готов. Ссылки на кнопки нужно будет обновить.', 'color:#9C2740');
-  </script>
+  </main>
 </body>
 </html>
